@@ -7,7 +7,7 @@ const url = `https://swapi-api.hbtn.io/api/films/${movieId}`;
 
 request(url, (error, response, body) => {
     if (error || response.statusCode!== 200) {
-      console.error('Error fetching movie:', error);
+      console.error(error);
       return;
     }
 
