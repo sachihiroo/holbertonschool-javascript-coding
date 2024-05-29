@@ -2,10 +2,10 @@
 
 const request = require('request');
 
-request(process.argv[2], (err, response) => {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log('code: ', response.statusCode);
+request(process.argv[2], function (error, response) {
+  if (error) {
+    console.error(`Error: ${error}`);
+    return;
   }
+  console.log(`code: ${response.statusCode}`);
 });
